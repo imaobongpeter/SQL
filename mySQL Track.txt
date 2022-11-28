@@ -1,0 +1,38 @@
+-- creating a Database
+create database Dakkada_Bootcamp22;
+use Dakkada_Bootcamp22;
+show tables;
+# creating a table
+
+create table DataScience_Track 
+(ID_No int primary key Not Null,
+Surname varchar(13) Not Null,
+Firstname varchar (13) Not Null,
+Lastname varchar(13),
+Gender char(1) Not Null,
+Phone varchar(15) Not Null,
+Email_Address varchar(30),
+Designation varchar(13),
+Asset_Status varchar(7));
+
+-- Inserting values into our table
+INSERT INTO DataScience_Track VALUES (101,'Peter','Imaobong','Young','F','09023803567','imaobongpeter043@gmail.com','Participant','Yes');
+select * from DataScience_Track;
+
+-- Inserting multiple records into our table DataScience_Track
+INSERT INTO DataScience_Track VALUES
+(102,'Peter','Imaobong','Young','F','09023803567','imaobongpeter043@gmail.com','Participant','Yes'),
+(103,'Okon','Mfon','Obong','M','09023806747','okonmobong53@gmail.com','Participant','Yes'),
+(104,'Bassey','Bassey','Ita','M','09024569001','basseyita@gmail.com','Participant','Yes'),
+(105,'Emmanuel','Mercy','Albert','M','09024443901','emmanuel@gmail.com','Participant','Yes'),
+(106,'Ubong','Inimfon','Ruby','M','07044326921','ubong66@gmail.com','Participant','Yes'),
+(107,'Mercy','Mercy','Albert','F','09098043901','mercy@gmail.com','Participant','Yes'),
+(108,'Marry','Mercy','Albert','F','09067859326','marry@gmail.com','Participant','Yes'),
+(109,'Ima','Inyang','Kufre','F','08097654932','ima@gmail.com','Participant','Yes');
+-- Viewing the items in our table
+select * from DataScience_Track;
+
+-- Accessing or Querying our table
+select * from DataScience_Track;
+select * from DataScience_Track where gender = 'M';
+select ID_NO, Surname, Gender,Phone from DataScience_Track where gender = 'F';
